@@ -137,97 +137,9 @@ Ataraxia is designed to be:
 * Remote work security hygiene
 * Infrastructure automation
 * Household ops tracking
+* Offline AI
+* Faraday Cage
 
----
-
-## 5. Compute-Based Web3 Production (Core Focus)
-
-Ataraxia explicitly avoids:
-
-* Bandwidth resale
-* Consumer VPN exit traffic
-* Speculative token farming
-* Social coordination games
-
-Instead, it focuses on **compute- and hardware-backed roles** that convert electricity and silicon into verifiable output.
-
----
-
-### ⛏️ Crypto Mining (CPU / GPU / ASIC)
-
-#### CPU Mining
-
-* Suitable for RandomX-class algorithms
-* Low barrier to entry
-* Educational and experimental
-
-**Hardware profile:**
-
-* Modern multi-core CPU (e.g., Ryzen-class)
-* 16–32 GB RAM
-* Efficient cooling
-
----
-
-#### GPU Mining
-
-* Higher throughput per watt than CPUs
-* Requires thermal and power planning
-
-**Hardware profile:**
-
-* Single or multiple mid-range GPUs
-* Quality PSU
-* Active ventilation
-
----
-
-#### ASIC Mining (Optional, Advanced)
-
-* Highest efficiency per hash
-* High noise and heat
-
-**Hardware profile:**
-
-* Dedicated ASIC units
-* Electrical and acoustic isolation
-
----
-
-### 🧱 Blockchain Nodes (Non-mining)
-
-#### Full Nodes
-
-* Contribute to network decentralization
-* No speculative behavior
-
-**Typical requirements:**
-
-* 4–8 CPU cores
-* 16–32 GB RAM
-* 1–2 TB SSD
-* Always-on uptime
-
----
-
-#### Validator / Staking Nodes (Optional)
-
-* Requires locked capital
-* Requires high uptime discipline
-
-**Used selectively** where risk and jurisdiction allow.
-
----
-
-### ♻️ Heat & Energy Reuse
-
-* Mining heat reused for:
-
-  * Room heating
-  * Mushroom incubation
-* Solar-assisted baseline power where feasible
-
-Energy is treated as a **closed-loop constraint**, not an externality.
 
 ---
 
@@ -248,8 +160,6 @@ Each production line is a **self-contained module**:
 * `food/herbs`
 * `protein/quail`
 * `preservation/fermentation`
-* `compute/mining`
-* `compute/nodes`
 * `energy/solar`
 * `automation/monitoring`
 
