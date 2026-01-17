@@ -138,12 +138,13 @@ Ataraxia is designed to be:
 * Infrastructure automation
 * Household ops tracking
 * Offline AI
+* Barter Trade Comparison
 * Faraday Cage
 
 
 ---
 
-## 6. Waste → Resource Loops
+## 5. Waste → Resource Loops
 
 * Coffee grounds → mushroom substrate
 * Food scraps → compost
