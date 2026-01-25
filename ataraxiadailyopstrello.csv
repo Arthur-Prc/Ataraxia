@@ -1,0 +1,13 @@
+Board,Card Name,List Name,Description,Priority
+Daily Ops,Morning System Check,Power & Connectivity,"Check solar/grid power, battery levels, internet status",High
+Daily Ops,Node Health Check,Raspberry Pi / LoRa Node,"Verify uptime, storage, temperature, logs",High
+Daily Ops,AI Knowledge Sync,Local AI Backup,Sync Wikipedia/books datasets if scheduled,Medium
+Daily Ops,Data Integrity,Storage,Run checksum / integrity verification,Medium
+Daily Ops,Mesh Status,LoRa Network,Confirm node beacon + message relay,Medium
+Daily Ops,Resource Ledger,Barter System,Update value equivalence ledger,Medium
+Daily Ops,Security Review,System Security,"Review access logs, keys, anomalies",High
+Daily Ops,Backup Snapshot,Cold Storage,Generate encrypted daily snapshot,High
+Daily Ops,Metrics Log,Observability,"Log uptime, power usage, storage growth",Low
+Weekly Ops,Dataset Expansion,Knowledge Base,"Add new books, manuals, offline datasets",Medium
+Weekly Ops,Hardware Inspection,Physical,"Check cables, dust, cooling",Medium
+Weekly Ops,Protocol Review,Ataraxia,Adjust barter equivalence parameters,Low
