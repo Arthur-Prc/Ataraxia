@@ -1,0 +1,166 @@
+# Ataraxia
+
+## A Home‑Scale Subsistence & Resilience Protocol
+
+Ataraxia is an open, reproducible protocol for **subsistence infrastructure**, designed to turn a common household into a **low‑maintenance, semi‑autonomous resource and income node**.
+
+The project focuses on **real, currently viable hardware activities**, prioritizing:
+
+* Plug‑and‑play operation
+* CPU‑based and low‑power workloads
+* Storage‑backed networks
+* Minimal human intervention
+* Predictable costs
+
+This repository documents the **operational doctrine**, hardware stack, and daily routines required to keep Ataraxia running.
+
+---
+
+## Core Principles
+
+* **Subsistence First**: Cover knowledge, data, and infrastructure needs before profit.
+* **Low Cognitive Load**: Systems must survive neglect.
+* **Hardware‑Backed Value**: No speculative DeFi or yield games.
+* **Modular & Replaceable**: Every component can fail without collapsing the system.
+* **Legal & Boring**: No gray‑area activities.
+
+---
+
+## What Ataraxia Produces
+
+### 1. Decentralized Storage Yield
+
+Ataraxia participates in multiple **storage‑based Web3 networks**, monetizing unused disk space and uptime.
+
+#### STORJ
+
+* Encrypted decentralized cloud storage
+* Requires stable internet and high uptime
+* Paid in STORJ tokens
+* CPU usage: Low
+* Disk usage: High
+
+#### SIA
+
+* Decentralized storage contracts
+* Higher technical complexity
+* Requires collateral locking
+* CPU usage: Low–Medium
+* Disk usage: High
+
+#### Filecoin (Lotus / Light setups)
+
+* Storage‑focused blockchain
+* Heavy hardware for full nodes (optional)
+* Lightweight participation preferred
+* CPU usage: Medium
+* Disk usage: High
+
+These systems transform **idle disks into long‑term yield infrastructure**.
+
+---
+
+### 2. Residential Bandwidth Monetization (Optional)
+
+#### HoneyGain
+
+* Passive residential bandwidth sharing
+* Runs on spare devices
+* Low revenue but fully automated
+* CPU usage: Minimal
+* Risk profile: Low
+
+HoneyGain is included strictly as a **background yield layer**, not a core dependency.
+
+---
+
+### 3. CPU‑Based Background Workloads
+
+* Storage proof verification
+* Hashing, sealing, and auditing tasks
+* Monitoring, logging, and encryption
+
+These workloads are intentionally limited to **CPU‑only or low‑end GPU‑optional systems**, avoiding mining arms races.
+
+---
+
+## Recommended Hardware Stack
+
+### Base Node (Minimum Viable Ataraxia)
+
+* Raspberry Pi 5 or Mini‑PC (Intel N100 / Ryzen Embedded)
+* 16–32 GB RAM
+* External HDDs or SSDs (8–40 TB total)
+* Gigabit Ethernet
+* Linux (Debian / Ubuntu Server)
+
+### Storage Layer
+
+* Multiple independent disks (no single point of failure)
+* SMART monitoring enabled
+* Encrypted at rest
+
+### Power & Resilience
+
+* UPS or small solar buffer (optional)
+* Automatic reboot and watchdogs
+
+---
+
+## Operational Reality (Important)
+
+This is **not high‑yield passive income**.
+
+Expected characteristics:
+
+* Long ROI cycles
+* Revenue mostly offsets power and connectivity costs
+* True value lies in **resilience, autonomy, and optionality**
+
+Ataraxia is designed to:
+
+* Reduce dependency on centralized services
+* Preserve knowledge offline
+* Generate small but real network‑native income
+
+---
+
+## Daily & Weekly Operations
+
+Operations are fully documented and tracked via Trello‑importable routines:
+
+* Node health checks
+* Storage integrity audits
+* Dataset synchronization
+* Security reviews
+* Encrypted backups
+
+(See `ataraxia_daily_ops_trello.csv`)
+
+---
+
+## What Ataraxia Is NOT
+
+* Not a mining farm
+* Not DeFi farming
+* Not speculative token trading
+* Not "get rich quick"
+
+It is **boring on purpose**.
+
+---
+
+## Roadmap
+
+* LoRa mesh knowledge nodes
+* Offline AI knowledge indexing
+* Barter equivalence ledger
+* Community‑shared subsistence protocols
+
+---
+
+## License
+
+MIT — use, fork, adapt, survive.
+
+Ataraxia is about **calm through preparedness**.
