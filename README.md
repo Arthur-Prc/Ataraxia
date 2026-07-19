@@ -1,456 +1,525 @@
 # Ataraxia
 
-### Household Production & Resilience Operating System
-
-**Ataraxia** is an open, modular household resilience protocol focused on recurring food production, preservation, sanitation, and low-complexity income systems.
-
-The project documents how a normal household, apartment, backyard, or compact homestead can operate as a small-scale production unit capable of generating recurring essentials with predictable outputs.
-
-This version of Ataraxia focuses exclusively on:
-
-* Yogurt
-* Bread
-* Jam
-* Potatoes
-* Microgreens
-* Quail
-* Mushrooms
-* Pickles
-* Fruit Trees
-* Soap
-* Income Generation Infrastructure
+> **An Open-Source IoT Framework for Small-Scale Household Food Production**
 
 ---
 
-# Philosophy
+## White Paper
 
-Ataraxia is not about infinite growth.
-
-It is about creating stable production loops that reduce dependency on fragile systems.
-
-The protocol prioritizes:
-
-* Calm operations
-* Predictable outputs
-* Real-world production
-* Low complexity
-* Repeatable systems
-* Resource efficiency
+### Version 1.0
 
 ---
 
-# Design Principles
+## Abstract
 
-## Small-Space Compatible
+Ataraxia is an open-source framework that combines household food production with low-cost Internet of Things (IoT) technologies to improve monitoring, operational consistency, and resource efficiency.
 
-Most systems are designed for:
+Rather than automating industrial agriculture, Ataraxia focuses on **small-scale, modular production systems** suitable for apartments, backyards, garages, greenhouses, and compact homesteads.
 
-* Apartments
-* Small houses
-* Garages
-* Backyards
-* Shelving systems
-* Vertical production
+The project proposes a collection of independent production modules built around affordable microcontrollers such as the ESP32 and Arduino-compatible platforms. Each module can be monitored through a unified mobile or web application while remaining fully functional without automation.
+
+The objective is not to replace manual production, but to provide better visibility into environmental conditions, production cycles, and maintenance activities using accessible open hardware.
 
 ---
 
-## Recurring Output
+# Vision
 
-Every module should ideally produce:
+Ataraxia seeks to become a reference architecture for open-source household production systems.
 
-* Food
-* Calories
-* Protein
-* Preserved goods
-* Hygiene products
-* Tradeable outputs
-* Operational redundancy
+Its goals are to:
 
----
-
-## Low Infrastructure Complexity
-
-Preference is given to:
-
-* Simple tools
-* Easy maintenance
-* Low power consumption
-* Manual override capability
-* Minimal points of failure
+* Improve operational awareness
+* Encourage repeatable production processes
+* Reduce unnecessary resource consumption
+* Enable modular expansion
+* Promote open hardware and open software
+* Lower the barrier to precision agriculture at household scale
 
 ---
 
-## Modular Architecture
+# Guiding Principles
 
-Every production system functions independently.
+## Simplicity First
 
-Failure in one module should not collapse the others.
+Automation should simplify operations rather than increase complexity.
+
+Every production module must remain usable without electronics.
 
 ---
 
-## Waste Reuse
+## Modular Design
 
-Examples:
+Each production system is independent.
 
-* Coffee grounds → mushroom substrate
-* Quail manure → compost
-* Fruit scraps → vinegar
-* Mushroom blocks → soil amendment
-* Bread surplus → fermentation feedstock
+Failures in one module should not affect the operation of others.
+
+---
+
+## Open Hardware
+
+The project favors:
+
+* Arduino-compatible boards
+* ESP32
+* Raspberry Pi gateways
+* Standard sensors
+* Readily available components
+* Community-developed hardware
+
+---
+
+## Local-First Operation
+
+The platform is designed to operate on local networks without requiring cloud services.
+
+Internet connectivity is optional rather than mandatory.
+
+---
+
+## Resource Awareness
+
+Every module should encourage efficient use of:
+
+* Water
+* Electricity
+* Growing space
+* Labor
+* Consumables
+
+---
+
+# System Architecture
+
+```text
+                     Mobile Application
+                           │
+                  REST API / MQTT
+                           │
+                 Raspberry Pi Gateway
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+     ESP32 Node        ESP32 Node        Arduino Node
+        │                  │                  │
+ Environmental       Production         Relay Control
+    Sensors            Sensors          (Optional)
+        │                  │
+ Household Production Modules
+```
+
+---
+
+# Core Hardware
+
+## Controller Options
+
+* ESP32
+* Raspberry Pi Pico W
+* Arduino Nano
+* Arduino Uno
+* Arduino Mega
+
+---
+
+## Gateway
+
+* Raspberry Pi
+* Mini PC
+* Linux server
+
+---
+
+## Communication
+
+* Wi-Fi
+* Bluetooth Low Energy
+* MQTT
+* HTTP REST
+
+Future roadmap:
+
+* LoRa
+* Zigbee
+* Thread
 
 ---
 
 # Production Modules
 
----
+Every production module follows the same architecture:
 
-# 🥛 Yogurt
-
-Recurring fermented dairy production.
-
-## Objectives
-
-* Reduce dependency on commercial dairy
-* Produce probiotic foods
-* Extend milk shelf life
-
-## Typical Outputs
-
-* Greek yogurt
-* Drinkable yogurt
-* Kefir-compatible cultures
-
-## Infrastructure
-
-* Glass jars
-* Stainless cookware
-* Thermometer
-* Incubation container
+* Sensors
+* Optional actuators
+* Production metrics
+* Environmental monitoring
+* Historical records
+* Maintenance schedule
 
 ---
 
-# 🍞 Bread
+# Yogurt Module
 
-Daily staple calorie production.
+### Objectives
 
-## Objectives
+* Improve incubation consistency
+* Record production batches
+* Monitor fermentation conditions
 
-* Produce reliable carbohydrates
-* Enable long-term dry ingredient storage
-* Maintain low-cost caloric production
+### Sensors
 
-## Production Types
+* Temperature
+* Humidity
+* Power monitoring
 
-* Sourdough
-* Flatbread
-* Sandwich bread
-* Long fermentation loaves
+### Metrics
 
-## Strategic Advantage
-
-Converts shelf-stable dry ingredients into recurring daily food.
-
----
-
-# 🍓 Jam
-
-Fruit preservation and surplus conversion.
-
-## Objectives
-
-* Extend fruit shelf life
-* Preserve seasonal production
-* Generate tradeable goods
-
-## Outputs
-
-* Berry jams
-* Citrus marmalades
-* Mixed fruit preserves
+* Batch duration
+* Incubation temperature
+* Production history
 
 ---
 
-# 🥔 Potatoes
+# Bread Module
 
-Dense calorie crop optimized for small spaces.
+### Objectives
 
-## Advantages
+* Monitor fermentation environments
+* Improve proofing consistency
 
-* High calories per square meter
-* Long-term storage compatibility
-* Container friendly
+### Sensors
 
-## Compatible Systems
+* Ambient temperature
+* Relative humidity
 
-* Grow bags
-* Raised beds
-* Vertical potato towers
+### Metrics
 
----
-
-# 🌱 Microgreens
-
-Fast-cycle nutrient production system.
-
-## Harvest Cycle
-
-7–14 days.
-
-## Advantages
-
-* Extremely space efficient
-* Minimal infrastructure
-* High nutrient density
-
-## Recommended Crops
-
-* Broccoli
-* Kale
-* Radish
-* Sunflower
-* Pea shoots
+* Fermentation duration
+* Dough schedule
+* Starter maintenance reminders
 
 ---
 
-# 🐦 Quail
+# Jam Module
 
-Compact protein production.
+### Objectives
 
-## Objectives
+* Improve preservation workflows
 
-* Egg production
-* Small-space livestock
-* Efficient feed conversion
+### Sensors
 
-## Outputs
+* Cooking temperature
+* Cooling timer
 
-* Eggs
-* Meat
-* Compostable manure
+### Metrics
 
-## Advantages
-
-* Quiet
-* Small footprint
-* Fast maturity cycle
+* Batch history
+* Jar inventory
+* Preservation records
 
 ---
 
-# 🍄 Mushrooms
+# Potato Module
 
-Vertical fungal food production.
+### Objectives
 
-## Recommended Species
+* Monitor container or raised-bed cultivation
 
-* Oyster
-* Lion’s Mane
-* Shiitake
+### Sensors
 
-## Advantages
+* Soil moisture
+* Soil temperature
+* Ambient humidity
+* Light intensity
 
-* Low light requirements
-* Fast growth cycles
-* Waste substrate utilization
+### Optional Automation
 
-## Compatible Inputs
-
-* Straw
-* Hardwood pellets
-* Coffee grounds
-* Agricultural waste
+* Irrigation relay
+* Water pump
 
 ---
 
-# 🫙 Pickles & Fermentation
+# Microgreens Module
 
-Food preservation and probiotic production.
+### Objectives
 
-## Outputs
+* Support rapid production cycles
+
+### Sensors
+
+* Humidity
+* Temperature
+* Light
+* Water reservoir level
+
+### Optional Automation
+
+* LED lighting
+* Irrigation pump
+* Ventilation fan
+
+---
+
+# Quail Module
+
+### Objectives
+
+* Improve environmental monitoring
+
+### Sensors
+
+* Coop temperature
+* Humidity
+* Feed level
+* Water level
+
+### Optional Features
+
+* Egg counter
+* Automatic lighting
+* Ventilation
+
+---
+
+# Mushroom Module
+
+### Objectives
+
+* Maintain ideal fruiting conditions
+
+### Sensors
+
+* Humidity
+* Temperature
+* Carbon dioxide
+* Light
+
+### Optional Automation
+
+* Humidifier
+* Exhaust fan
+* Air exchange
+
+---
+
+# Fermentation Module
+
+Supports:
 
 * Pickles
 * Sauerkraut
 * Kimchi
-* Fermented peppers
-* Vinegars
+* Vinegar
+* Pepper fermentation
 
-## Objectives
+### Sensors
 
-* Reduce waste
-* Increase shelf life
-* Improve food storage resilience
-
----
-
-# 🌳 Fruit Trees
-
-Long-term perennial food infrastructure.
-
-## Recommended Trees
-
-* Citrus
-* Banana
-* Fig
-* Peach
-* Mulberry
-* Avocado
-
-## Strategic Role
-
-* Passive food production
-* Shade generation
-* Multi-year resilience
+* Temperature
+* pH (optional)
 
 ---
 
-# 🧼 Soap
+# Fruit Tree Module
 
-Basic sanitation resilience module.
+### Objectives
 
-## Objectives
+Long-term perennial monitoring.
 
-* Produce essential hygiene products
-* Reduce retail dependency
-* Generate tradable goods
+### Sensors
 
-## Production Types
+* Soil moisture
+* Soil temperature
+* Electrical conductivity
+* Rainfall
+* Light intensity
 
-* Cold-process soap
-* Laundry soap
-* Utility cleaning bars
+### Optional Automation
 
----
-
-# 💻 Income Generator Infrastructure
-
-Ataraxia references the external project:
-
-## [XternA Income Generator Repository](https://github.com/XternA/income-generator?utm_source=chatgpt.com)
-
-This repository provides a containerized multi-platform infrastructure stack designed to run lightweight income-generating applications using unused compute and internet bandwidth. ([GitHub][1])
-
-The Ataraxia philosophy aligns with this project because it emphasizes:
-
-* Low-maintenance infrastructure
-* Small recurring outputs
-* Hardware-backed systems
-* Automation-first deployment
-* Resource efficiency
-* Long-term operational stability
+* Smart irrigation
 
 ---
 
-## Referenced Concepts From Income Generator
+# Soap Module
 
-The referenced project includes:
+### Objectives
 
-* Containerized deployment
-* Auto-updating stacks
-* Cross-platform support
-* Raspberry Pi compatibility
-* Resource-limited execution
-* Multi-device orchestration
-* Automation tooling
-* Lightweight passive infrastructure workloads
+Monitor curing conditions.
 
-([GitHub][1])
+### Sensors
 
----
+* Temperature
+* Humidity
 
-## Infrastructure Philosophy
+### Metrics
 
-Ataraxia treats digital income systems similarly to food systems:
-
-* Small recurring outputs
-* Long-term stability
-* Minimal maintenance
-* Modular scaling
-* Hardware-backed operation
-
-The goal is not speculative wealth generation.
-
-The goal is predictable supplemental production.
+* Cure duration
+* Batch tracking
 
 ---
 
-# Suggested Repository Structure
+# Mobile Application
+
+The companion application provides a unified interface for every production module.
+
+## Dashboard
+
+Displays:
+
+* Active production systems
+* Environmental conditions
+* Maintenance reminders
+* Alerts
+* Harvest schedules
+* Historical trends
+
+---
+
+## Production Pages
+
+Each module contains:
+
+* Current sensor values
+* Production history
+* Batch records
+* Maintenance log
+* Manual notes
+* Automation settings
+
+---
+
+## Notifications
+
+Examples include:
+
+* Harvest reminders
+* Irrigation alerts
+* Low water levels
+* Environmental deviations
+* Equipment offline
+* Scheduled maintenance
+
+---
+
+# Data Collection
+
+The framework records production-related metrics over time.
+
+Typical measurements include:
+
+* Temperature
+* Humidity
+* Soil moisture
+* Water consumption
+* Harvest weight
+* Production cycles
+* Batch history
+* Equipment uptime
+
+Historical data supports trend analysis and operational improvements.
+
+---
+
+# Repository Structure
 
 ```text
 ataraxia/
-├── food/
+│
+├── firmware/
+│   ├── esp32/
+│   ├── arduino/
+│   ├── pico/
+│   └── shared/
+│
+├── hardware/
+│   ├── sensors/
+│   ├── wiring/
+│   ├── pcb/
+│   ├── enclosures/
+│   └── bill-of-materials/
+│
+├── gateway/
+│   ├── raspberry-pi/
+│   ├── mqtt/
+│   ├── docker/
+│   └── node-red/
+│
+├── mobile/
+│   ├── flutter/
+│   └── assets/
+│
+├── dashboard/
+│   ├── api/
+│   ├── web/
+│   └── database/
+│
+├── modules/
 │   ├── yogurt/
 │   ├── bread/
 │   ├── jam/
 │   ├── potatoes/
 │   ├── microgreens/
 │   ├── mushrooms/
-│   └── pickles/
-│
-├── protein/
-│   └── quail/
-│
-├── perennial/
-│   └── fruit-trees/
-│
-├── sanitation/
+│   ├── quail/
+│   ├── fermentation/
+│   ├── fruit-trees/
 │   └── soap/
 │
-├── income/
-│   ├── xterna-income-generator-reference/
-│   ├── raspberry-pi/
-│   ├── low-power-hosts/
-│   ├── docker/
-│   └── automation/
+├── docs/
+│   ├── whitepaper/
+│   ├── hardware/
+│   ├── software/
+│   ├── automation/
+│   ├── api/
+│   └── module-standards/
 │
-├── systems/
-│   ├── compost/
-│   ├── storage/
-│   ├── preservation/
-│   ├── inventory/
-│   ├── monitoring/
-│   └── water/
-│
-└── docs/
-    ├── production-metrics/
-    ├── failure-modes/
-    ├── automation/
-    └── scaling/
+├── LICENSE
+└── README.md
 ```
 
 ---
 
-# Module Standards
+# Development Roadmap
 
-Each module should document:
+## Phase 1
 
-* Space requirements
-* Startup cost
-* Power usage
-* Water usage
-* Weekly labor time
-* Expected output
-* Shelf life
-* Preservation methods
-* Failure modes
-* Automation opportunities
-* Scaling pathways
+* Core documentation
+* Hardware specifications
+* Sensor reference implementations
+* ESP32 firmware
+* MQTT communication
 
----
+## Phase 2
 
-# Long-Term Vision
+* Flutter mobile application
+* Local dashboard
+* Historical data storage
+* Production analytics
 
-Ataraxia aims to become:
+## Phase 3
 
-* A household production operating system
-* A practical resilience knowledge base
-* A modular small-scale production framework
-* A calm alternative to fragile dependency systems
+* OTA firmware updates
+* Community hardware modules
+* Advanced automation rules
+* AI-assisted environmental recommendations
+* Weather service integration
 
 ---
 
-# Final Principle
+# Scope
 
-> Stability is built from recurring production.
+Ataraxia is intended as an educational and engineering framework for monitoring and managing small-scale household production.
 
-Ataraxia exists to make that production modular, repeatable, and sustainable.
+The project does not prescribe specific agricultural practices or guarantee production outcomes. Hardware, sensors, and automation are provided as modular reference implementations that users may adapt to their own environments.
 
-[1]: https://github.com/XternA/income-generator?utm_source=chatgpt.com "GitHub - XternA/income-generator: A set & forget, multi-platform, lightweight, self-updating container stack managing passive income applications utilising unused internet bandwidth. With native OS solution for fast deployment in mind with global tool access and multi-proxy support."
+---
+
+# Conclusion
+
+Modern precision agriculture should not be limited to commercial farms. Affordable microcontrollers, open-source software, and accessible sensors make it possible to bring environmental monitoring and operational insight to household-scale production.
+
+Ataraxia demonstrates how modular IoT systems can support resilient, local food production while remaining simple, repairable, and community-driven.
+
+By combining open hardware, local-first software, and practical production modules, the project aims to lower the barrier to adopting precision monitoring in everyday food production systems.
+
+---
+
+> **Ataraxia is not about producing more. It is about producing better—with visibility, consistency, and simplicity.**
